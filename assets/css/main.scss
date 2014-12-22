@@ -287,13 +287,6 @@
     width: 140px;
 }
 
-.post-footer .share a {
-    font-size: 1.8rem;
-    display: inline-block;
-    margin: 1rem 1.6rem 1.6rem 0;
-    color: #BBC7CC;
-    text-decoration: none;
-}
 
 .post-footer .share a:hover {
     color: #50585D;
@@ -512,8 +505,13 @@
 }
 
 
-
-.post-template .post { margin-top: 5rem; }
+.home-template .content {
+    margin-top: -4rem;
+    @include breakpoint(papa-bear) { margin-top: 0; }
+}
+.post-template .post {
+    @include breakpoint(papa-bear) { margin-top: 5rem; }
+}
 .teaser-image { 
     width: 115%; 
     margin: 0 0 2rem -7.5%; 
@@ -532,4 +530,9 @@ a .teaser-image:hover { box-shadow: 0 1px 3px rgba(0,0,0,.66); }
     width: 100%; 
     float: left; 
     text-align: center; 
+}
+
+.share {
+    text-align: center;
+    h6 { margin-bottom: .25rem; }
 }

@@ -6,7 +6,9 @@
 <header class="main-header {{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}">
     <nav class="main-nav overlay clearfix">
         {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
-        <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
+        <a class="header-button fa fa-rss fa-lg" href="{{@blog.url}}/rss/"></a>
+        <a class="header-button fa fa-twitter fa-lg" href="https://www.twitter.com/danielknisley"></a>
+        <a class="header-button fa fa-linkedin fa-lg" href="https://www.linkedin.com/in/danielknisley"></a>
     </nav>
     
     <a class="scroll-down icon-arrow-left" href="#content" data-offset="-45"><span class="hidden">Scroll Down</span></a>

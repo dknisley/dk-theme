@@ -33,16 +33,23 @@ h4, h5, h6 {
   font-family: "Merriweather", sans-serif; }
 
 h1 {
-  font-size: 3rem;
+  font-size: 1.75rem;
+  line-height: 1.25;
   letter-spacing: -2px;
-  text-indent: -3px; }
+  text-indent: -3px; 
+  @include breakpoint(baby-bear) { font-size: 3rem; }
+}
 
 h2 {
-  font-size: 2.5rem;
-  letter-spacing: -1px; }
+  font-size: 1.5rem;
+  letter-spacing: -1px; 
+  @include breakpoint(baby-bear) { font-size: 2.5rem; }
+}
 
 h3 {
-  font-size: 2rem; }
+  font-size: 1.25rem; 
+  @include breakpoint(baby-bear) { font-size: 2rem; }
+}
 
 h4 {
   font-size: 1.5rem; }
@@ -236,9 +243,11 @@ margin on the iframe, cause it breaks stuff. */
   margin: 0; }
 
 .tag-title { 
-  font-size: 2rem; 
-  margin-bottom: 5rem;
+  font-size: 1.25rem; 
+  margin-top: 1rem; 
+  margin-bottom: 3rem;
   .tag-highlight {
     color: $cornflower;
   }
+  @include breakpoint(baby-bear) { font-size: 2rem; margin-bottom: 5rem; margin-top: 0; }
 }
