@@ -1,0 +1,42 @@
+input[type="submit"] { 
+  outline: none;
+  border: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: $book;
+}
+
+%button, .button {
+  font-size: 1.25rem;
+  border-radius: 3px;
+  padding: .75rem 1.5rem;
+  @include transition(all .33s ease-in-out);
+}
+
+%button-shadow { 
+  box-shadow: 0 1px 2px rgba(0,0,0,.25);
+  &:hover { box-shadow: 0 1px 2px rgba(0,0,0,.5); } 
+}
+
+
+.facebook-btn-ghost { 
+  color: $facebook-blue;
+  @extend %button;
+  font-size: 1rem;
+  border: 2px solid rgba($facebook-blue, .75); 
+  background: none;
+  font-weight: $book;
+  &:hover { 
+    background: $facebook-blue;
+    color: white;
+    @extend %button-shadow;
+  }
+}
+
+.button.green { 
+  background: $green;
+  color: white; 
+  @extend %button-shadow;
+  @extend .all-caps;
+  &:hover { background: darken($green, 10%); }
+}

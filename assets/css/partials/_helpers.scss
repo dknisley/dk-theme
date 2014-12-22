@@ -1,0 +1,93 @@
+
+/* Clears shit */
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+/* Hides shit */
+.hidden {
+    text-indent: -9999px;
+    visibility: hidden;
+    display: none;
+}
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner {
+    position: relative;
+    width: 80%;
+    max-width: 710px;
+    margin: 0 auto;
+}
+
+/* Centres vertically yo. (IE8+) */
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+// Mixins
+
+%block-it-out { 
+  width: 100%; float: left; 
+}
+
+.full-width { width: 100%; }
+.all-caps { text-transform: uppercase; }
+
+%transition {
+  @include transition(all .33s ease-in-out);
+}
+
+@mixin antialiased {
+      -webkit-font-smoothing: antialiased; 
+      -moz-osx-font-smoothing: grayscale;
+      text-shadow: 0 0 1px rgba(255,255,255,.01); 
+}
+
+// Breakpoint mixin
+@mixin breakpoint($point) {
+  @if $point == baby-bear {
+    @media (min-width: 500px)  { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (min-width: 750px) { @content; }
+  }
+  @else if $point == papa-bear {
+  @media (min-width: 1000px) { @content; }
+  }
+  @else if $point == big-papa-bear {
+  @media (min-width: 1500px) { @content; }
+  }
+  @else if $point == target-baby-bear {
+  @media (min-width: 1px) and (max-width: 749px) { @content; }
+  }
+  @else if $point == target-mama-bear {
+  @media (min-width: 750px) and (max-width: 999px) { @content; }
+  }
+
+  // Petition Specific
+  @else if $point == RamRod {
+  @media (min-width: $RamRod-max-width) { @content; }
+  }
+}
+
+%vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+%hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+%invisible {
+    visibility: hidden;
+}

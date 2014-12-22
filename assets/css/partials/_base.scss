@@ -1,0 +1,44 @@
+ // Variables and Mixins
+
+@import url(http://fonts.googleapis.com/css?family=Fira+Sans:300,400);
+
+    //Sway Palette
+    $san-jaun: #274762;
+    $tundora: #414141;
+    $athens-gray: #F0F2F5;
+    $dusty-gray: #9B9B9B;
+    $pelorous: #3CA7BF;
+    $bluewood : #2E4C53;
+    $cornflower: #5FA8E8;
+    $green: #A0CB8A;
+    $red: #F15B2A;
+    $yellow: #FFCE52;
+    $white: #f2f2f2;
+    $lt-gray: #dedede;
+    $lightestgray: #e5e5e5;
+    $facebook-blue: #3b5998;
+
+    //fonts
+    $primary-font: 'Fira Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    $base-font-size: 16px;
+    $base-rem-size: rem-calc(16px);
+    $em-base: 16px;
+
+    //Misc
+    $radius: 3px;
+
+    //Typography
+    $body-font-color: $tundora;
+    $header-font-color: $tundora;
+    $light: 300;
+    $book: 400;
+
+    //Colors
+    $primary-color: $pelorous;
+    $secondary-color: $cornflower;
+    $alert-color: $red;
+    $success-color: $green;
+
+    //Grid
+    $row-width: em-calc(1040);
+

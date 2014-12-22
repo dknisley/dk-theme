@@ -1,0 +1,46 @@
+  #{$all-text-inputs} { 
+  background: $athens-gray;
+  color: $dusty-gray;
+  border: none;
+  outline: none;
+  width: 100%; 
+  font-weight: $book;
+  padding: .75rem;
+  height: 3rem;
+  margin: .25rem 0;
+  @include transition(all .33s ease-in-out);
+    &:focus { 
+      background: white;
+      box-shadow: 0 0 0 2px $cornflower;
+    }
+ }
+
+input[type="text"].two-col-field { 
+  width: 50%;
+  float: left;
+  &:nth-child(1) { border-radius: 3px 0 0 3px; border-right: 1px solid white; }
+  &:nth-child(2) { border-radius: 0 3px 3px 0; border-left: 1px solid white; }
+}
+
+#password { 
+  width: 90%;
+}
+
+ #password-toggle {
+  display: none;
+ }
+
+ #password-toggle + label {
+    background: url('../../img/password-toggle.png') no-repeat center center;
+    cursor: pointer;
+    border-radius: 0 3px 3px 0;
+    width: 10%; height: 3rem;
+    margin: .25rem 0;
+    display: block;
+    float: right;
+    z-index: 999;
+ }
+
+  #password-toggle:checked + label { 
+    background: url('../../img/password-toggle-active.png') no-repeat center center;
+  }
